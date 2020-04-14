@@ -41,7 +41,7 @@ const listSchema = {
 const List = mongoose.model("List", listSchema);
 
 app.get("/", function (req, res) {
-    const day = date.getDate();
+    //const day = date.getDate();
 
     Item.find({}, function (err, foundItems) {
         if (foundItems.length === 0) {
@@ -134,7 +134,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
     port = 3000;
 }
-app.listen(port);
 
 app.listen(port, function () {
     console.log("Sever has started successfully.");
